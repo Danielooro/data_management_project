@@ -1,7 +1,6 @@
 import pandas as pd
-from exploracionDx import correlacion_pares, graficar_pairplot
+from tratamientoDx import eliminar_columnas_erroneas, eliminar_filas_erroneas
 
-# Suponiendo que tienes un dataset llamado 'data.csv'
 data = pd.read_csv('data.csv')
-print(correlacion_pares(data))
-graficar_pairplot(data)
+data = eliminar_columnas_erroneas(data)
+data = eliminar_filas_erroneas(data)
